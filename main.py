@@ -9,11 +9,13 @@ registers = {
 
 exec = True
 
-with open(argv[1], "r+b") as f:
+# argv[1]
+with open('test.cn', "r+b") as f:
 	lines = f.readlines()
 
-for line in lines:
-	lexed = [line[i:i + 4] for i in range(0, len(line), 4)]
+i = 0
+while i  < len(lines):
+	lexed = [lines[i][j:j + 4] for j in range(0, len(lines[i]), 4)]
 	
 	if lexed[0] == b'\xf0\x9f\x8d\x89' and exec == False:
 		exec = True
@@ -36,7 +38,7 @@ for line in lines:
 
 		if lexed[0] == b'\xf0\x9f\x8c\xb8':
 			# 4🌸 goto
-			line = registers[lexed[1]]
+			i = registers[lexed[1]]
 	
 		if lexed[0] == b'\xf0\x9f\x8d\x87':
 			# 6🍇 Addition Operator
@@ -80,3 +82,5 @@ for line in lines:
 		
 		if lexed[0] in registers:
 			registers[lexed[0]] = eval(b''.join(lexed[i] for i in range(1, len(lexed))))
+   
+	i += 1
