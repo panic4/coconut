@@ -13,7 +13,7 @@ registers = {
 
 
 def eq_op():
-    # syntax: [EQ_EMOJ][R_src][R_src][R_dest]
+	# syntax: [EQ_EMOJ][R_src][R_src][R_dest]
 	if registers[lexed[1]] == registers[lexed[2]]:
 		registers[lexed[3]] = True
 	else:
@@ -22,7 +22,7 @@ def eq_op():
 
 
 def lt_op():
-    # syntax: [LT_EMOJ][R_src][R_src][R_dest]
+	# syntax: [LT_EMOJ][R_src][R_src][R_dest]
 	if registers[lexed[1]] < registers[lexed[2]]:
 		registers[lexed[3]] = True
 	else:
@@ -31,7 +31,7 @@ def lt_op():
 
 
 def gt_op():
-    # syntax: [GT_EMOJ][R_src][R_src][R_dest]
+	# syntax: [GT_EMOJ][R_src][R_src][R_dest]
 	if registers[lexed[1]] > registers[lexed[2]]:
 		registers[lexed[3]] = True
 	else:
@@ -40,19 +40,19 @@ def gt_op():
 
 
 def not_op():
-    # syntax: [NOT_EMOJ][R_src][R_dest]
+	# syntax: [NOT_EMOJ][R_src][R_dest]
 	registers[lexed[2]] = not registers[lexed[1]]
 	print(registers[lexed[2]])
 
 
 def or_op():
-    # syntax: [OR_EMOJ][R_src][R_src][R_dest]
+	# syntax: [OR_EMOJ][R_src][R_src][R_dest]
 	registers[lexed[3]] = registers[lexed[1]] or registers[lexed[2]]
 	print(registers[lexed[3]])
 
 
 def and_op():
-    # syntax: [AND_EMOJ][R_src][R_src][R_dest]
+	# syntax: [AND_EMOJ][R_src][R_src][R_dest]
 	registers[lexed[3]] = registers[lexed[1]] and registers[lexed[2]]
 	print(registers[lexed[3]])
 
