@@ -7,58 +7,58 @@ registers={
 
 with open('test.cn', "r+b") as f:
     line = f.readline()
-    lexed = []
-    for i in range(len(line) // 4):
-        lexed.append(line[4 * i: 4 * i + 4])
+
+lexed = [line[i:i + 4] for i in range(0, len(line), 4)]
 
 if lexed[0] == b'\xf0\x9f\x8d\x8e':
 	#1🍎
-	print()
+	pass
 if lexed[0] == b'\xf0\x9f\x8c\x88':
 	#2🌈
-	print()
+	pass
 if lexed[0] == b'\xf0\x9f\x8d\x89':
 	#3🍉
-	print()
+	pass
 if lexed[0] == b'\xf0\x9f\x8c\xba':
 	#4🌺
-	print()
+	pass
 if lexed[0] == b'\xf0\x9f\xa5\x9d':
 	#5🥝
-	print()
+	pass
 if lexed[0] == b'\xf0\x9f\x8d\x87':
 	#6🍇
-	print()
+	pass
 if lexed[0] == b'\xf0\x9f\x8d\x8a':
 	#7🍊
-	print()
+	pass
 if lexed[0] == b'\xf0\x9f\x8d\x93':
 	#8🍓
-	print()
+	pass
 if lexed[0] == b'\xf0\x9f\x8d\x92':
 	#9🍒
-	print()
+	pass
 if lexed[0] == b'\xf0\x9f\x8d\x88':
 	#10🍈
-	print()
+	pass
 if lexed[0] == b'\xf0\x9f\x8d\x8d':
 	#11⛱️
-	print()
+	pass
 if lexed[0] == b'\xf0\x9f\x8d\xb9':
 	#12⛵️
-	print()
+	pass
 if lexed[0] == b'\xf0\x9f\xa5\xad':
 	#13🥭
-	print()
+	pass
 if lexed[0] == b'\xf0\x9f\xa4\xbf':
 	#14🤿
-	print()
+	pass
 if lexed[0] == b'\xf0\x9f\x8f\x9d':
 	#15🏝
-	print()
+	pass
 if lexed[0] == b'\xf0\x9f\x8c\x8b':
 	#16🌋 
-	print()
+	pass
 if lexed[0] == b'\xf0\x9f\x8c\x8a':
-	#17🌊
-	print()
+	pass
+if lexed[0] in registers:
+	registers[lexed[0]] = b''.join(lexed[i] for i in range(1,len(lexed)))
