@@ -8,12 +8,15 @@
 🎣🩳
 🍉
 🌈🥑
+🍇🧃🥑🧃
 🩳1
 🍈🧃🩳🩳 if pos = 0
 🍉🩳
 🩳'As you approach the life raft, you notice it has holes torn into it and looks irreparable. After digging around in it, you do find an intact flare and some duct tape.\n1. Go back the way you came.\n2. Take the intact supplies.\n'
 🎣🩳
 🍉
+🌈🥑
+🍓🥑🧃🧃
 🩳2
 🍈🧃🩳🩳 if pos = 0
 🍉🩳
@@ -50,3 +53,5 @@
 🩳'You've reached the highest point of the island. At the edge of the horizon you can spot a green freighter.\n1. Turn back./n2. Signal the freighter.\n'
 🎣🩳
 🍉
+🩳4
+🌸🩳
