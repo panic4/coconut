@@ -61,4 +61,4 @@ if lexed[0] == b'\xf0\x9f\x8c\x8b':
 if lexed[0] == b'\xf0\x9f\x8c\x8a':
 	pass
 if lexed[0] in registers:
-	registers[lexed[0]] = b''.join(lexed[i] for i in range(1,len(lexed)))
+	registers[lexed[0]] = eval(b''.join(lexed[i] for i in range(1,len(lexed))))
