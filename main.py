@@ -1,12 +1,15 @@
+from sys import argv
+
 registers = {
-	b'\xf0\x9f\x8d\x8c': None,		#🍌
-	b'\xf0\x9f\xa7\x83': None,		#🧃
-	b'\xf0\x9f\xa5\x91': None,		#🥑
-	b'\xf0\x9f\xa9\xb3': None		#🩳
+	b'\xf0\x9f\x8d\x8c': None,	#🍌
+	b'\xf0\x9f\xa7\x83': None,	#🧃
+	b'\xf0\x9f\xa5\x91': None,	#🥑
+	b'\xf0\x9f\xa9\xb3': None	#🩳
 }
 
 exec = True
-with open('test.cn', "r+b") as f:
+
+with open(argv[1], "r+b") as f:
 	lines = f.readlines()
 
 for line in lines:
@@ -15,15 +18,16 @@ for line in lines:
 	if lexed[0] == b'\xf0\x9f\x8d\x89' and exec == False:
 		exec = True
 
-	if exec: 
-	
-		if lexed[0] == b'\xf0\x9f\x8d\x8e':
-			# 1🍎
-			pass
+	if exec:
 	
 		if lexed[0] == b'\xf0\x9f\x8c\x88':
-			# 2🌈 input statement
+			#🌈 input statement
 			registers[lexed[1]] = input()
+			
+		if lexed[0] == b'\xf0\x9f\x8e\xa3':
+			#18🎣 Print statement
+			if lexed[1] in registers: 
+				print(registers[lexed[1]])
 	
 		if lexed[0] == b'\xf0\x9f\x8d\x89' and len(lexed)>1:
 			# 3🍉 if/endif statement
@@ -33,10 +37,6 @@ for line in lines:
 		if lexed[0] == b'\xf0\x9f\x8c\xb8':
 			# 4🌸 goto
 			line = registers[lexed[1]]
-	
-		if lexed[0] == b'\xf0\x9f\xa5\x9d':
-			# 5🥝
-			pass
 	
 		if lexed[0] == b'\xf0\x9f\x8d\x87':
 			# 6🍇 Addition Operator
@@ -77,20 +77,6 @@ for line in lines:
 		if lexed[0] == b'\xf0\x9f\x8f\x9d':
 			# 15🏝 < operator
 			registers[lexed[3]] = registers[lexed[1]] < registers[lexed[2]]
-	
-		if lexed[0] == b'\xf0\x9f\x8c\x8b':
-			# 16🌋
-			pass
-	
-		if lexed[0] == b'\xf0\x9f\x8c\x8a':
-			# 17🌊
-			pass
-	
-		if lexed[0] == b'\xf0\x9f\x8e\xa3':
-			#18🎣 Print statement
-			if lexed[1] in registers: 
-				print(registers[lexed[1]])
 		
 		if lexed[0] in registers:
 			registers[lexed[0]] = eval(b''.join(lexed[i] for i in range(1, len(lexed))))
-		
