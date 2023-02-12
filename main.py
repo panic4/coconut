@@ -1,5 +1,5 @@
 registers={
-	b'\xf0\x9f\x8d\x8c': 8,
+	b'\xf0\x9f\x8d\x8c': None,
 	b'\xf0\x9f\xa7\x83': 2,
 	b'\xf0\x9f\xa5\x91': None,
 	b'\xf0\x9f\xa9\xb3': None
@@ -78,7 +78,6 @@ with open('test.cn', "r+b") as f:
             registers[lexed[3]] = registers[lexed[1]] + registers[lexed[2]] 
             print(registers[lexed[3]])
             
-
         if lexed[0] == b'\xf0\x9f\x8d\x8a':
             #7🍊multiplication operator
             registers[lexed[3]] = registers[lexed[1]] * registers[lexed[2]]
@@ -118,3 +117,10 @@ with open('test.cn', "r+b") as f:
         if lexed[0] == b'\xf0\x9f\x8c\x8a':
             #17🌊
             print()
+        if lexed[0] == b'\xf0\x9f\x8e\xa3':
+            #17🎣 
+            if lexed[1] in registers: 
+                print(registers[lexed[1]])
+                
+        if lexed[0] in registers:
+	        registers[lexed[0]] = eval(b''.join(lexed[i] for i in range(1,len(lexed))))
