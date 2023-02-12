@@ -1,50 +1,52 @@
-🩳'You wake up on a beach covered in dried salt and sand. You can’t seem to remember how you got there, and you’re feeling dehydrated.'
+🩳'You wake up on a beach covered in dried salt and sand. You can’t seem to remember how you got there, and you’re feeling dehydrated.\n'
 🎣🩳
+🧃0
 🩳0
 🍈🧃🩳🩳 if pos = 0
 🍉🩳
-🩳'The bright sun beats down on your face. You could head into the forest, towards the center of the island. Down the coast is a bright orange life raft.'
+🩳'The bright sun beats down on your face. You could head into the forest, towards the center of the island. Down the coast is a bright orange life raft.\n1. Check out the life raft.\n2. Find some shade in the forest.\n'
 🎣🩳
 🍉
+🌈🥑
 🩳1
 🍈🧃🩳🩳 if pos = 0
 🍉🩳
-🩳'As you approach the life raft, you notice it has holes torn into it and looks irreparable. After digging around in it, you do find an intact flare and some duct tape.	'
+🩳'As you approach the life raft, you notice it has holes torn into it and looks irreparable. After digging around in it, you do find an intact flare and some duct tape.\n1. Go back the way you came.\n2. Take the intact supplies.\n'
 🎣🩳
 🍉
 🩳2
 🍈🧃🩳🩳 if pos = 0
 🍉🩳
-🩳'You are now in the forest, toward the Western end of the island. You notice some decently-sized logs hidden in some shrubs. You could head back to shore, or proceed deeper and a few different directions.'
+🩳'You are now in the forest, toward the Western end of the island. You notice some decently-sized logs hidden in some shrubs. You could head back to shore, or proceed deeper and a few different directions.\n1. Head to the Northern area of the forest.\n2. Head to the Southern area of the forest.\n3. Go back to the shore.\n4. Use the tape to make a raft.\n'
 🎣🩳
 🍉
 🩳3
 🍈🧃🩳🩳 if pos = 0
 🍉🩳
-🩳'In the distance you see a large cliff. It looks like a good vantage point.'
+🩳'In the distance you see a large cliff. It looks like a good vantage point.\n1. Head back to the Western side of the forest.\n2. Enter the Southern end of the forest.\n3. Hike up the cliff.\n'
 🎣🩳
 🍉
 🩳4
 🍈🧃🩳🩳 if pos = 0
 🍉🩳
-🩳'You enter the Southern side of the forest. In the distance, you hear gentle running water. In a different direction, you hear a deep growl.'
+🩳'You enter the Southern side of the forest. In the distance, you hear gentle running water. In a different direction, you hear a deep growl.\n1. Go to the Western area of the forest.\n2. Go to the Southern part of the forest.\n3. Investigate the water.\n4. Investigate the ferocious animal noises.\n'
 🎣🩳
 🍉
 🩳5
 🍈🧃🩳🩳 if pos = 0
 🍉🩳
-🩳'As you approach, you see you're headed towards a very dark cave. You could turn around or head into it.'
+🩳'As you approach, you see you're headed towards a very dark cave. You could turn around or head into it.\n1. Let's go spelunking!\n2. Let's turn around!\n'
 🎣🩳
 🍉
 🩳6
 🍈🧃🩳🩳 if pos = 0
 🍉🩳
-🩳'The dirt gives way to rocks as you come upon a serene and beautiful creek. There isn't much around, but it looks like a fine place to have a drink.'
+🩳'The dirt gives way to rocks as you come upon a serene and beautiful creek. There isn't much around, but it looks like a fine place to have a drink.\n1. Have a quick drink.\n2. Go back in the forest.\n'
 🎣🩳
 🍉
 🩳7
 🍈🧃🩳🩳 if pos = 0
 🍉🩳
-🩳'You've reached the highest point of the island. At the edge of the horizon you can spot a green freighter.'
+🩳'You've reached the highest point of the island. At the edge of the horizon you can spot a green freighter.\n1. Turn back./n2. Signal the freighter.\n'
 🎣🩳
 🍉
