@@ -1,12 +1,12 @@
 registers={
 	b'\xf0\x9f\x8d\x8c': None,
-	b'\xf0\x9f\xa7\x83': 2,
+	b'\xf0\x9f\xa7\x83': None,
 	b'\xf0\x9f\xa5\x91': None,
 	b'\xf0\x9f\xa9\xb3': None
 }
-# add sutraction div mul 
+
 with open('test.cn', "r+b") as f:
-	line = f.readline()
+    line = f.readline()
 
 lexed = [line[i:i + 4] for i in range(0, len(line), 4)]
 
@@ -73,6 +73,5 @@ if lexed[0] == b'\xf0\x9f\x8e\xa3':
 	#17🎣 
 	if lexed[1] in registers: 
 		print(registers[lexed[1]])
-		
 if lexed[0] in registers:
 	registers[lexed[0]] = eval(b''.join(lexed[i] for i in range(1,len(lexed))))
