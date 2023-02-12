@@ -16,8 +16,8 @@ with open('test.cn', "r+b") as f:
 			pass
       
 		if lexed[0] == b'\xf0\x9f\x8c\x88':
-			# 2🌈
-			pass
+			# 2🌈 input statement
+			registers[lexed[1]] = input()
       
 		if lexed[0] == b'\xf0\x9f\x8d\x89':
 			# 3🍉 if/endif statement
@@ -82,7 +82,7 @@ with open('test.cn', "r+b") as f:
 		if lexed[0] == b'\xf0\x9f\x8e\xa3':
 			#18🎣 Print statement
 			if lexed[1] in registers: 
-				print(registers[lexed[1]])
+				print(registers[lexed[1]], end='')
         
 		if lexed[0] in registers:
 			registers[lexed[0]] = eval(b''.join(lexed[i] for i in range(1, len(lexed))))
