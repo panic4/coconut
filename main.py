@@ -71,7 +71,7 @@ with open('test.cn', "r+b") as f:
             print()
         if lexed[0] == b'\xf0\x9f\x8d\x89':
             # 3🍉 if/endif statement
-            pass
+            print()
         if lexed[0] == b'\xf0\x9f\x8c\xba':
             # 4🌺
             print()
