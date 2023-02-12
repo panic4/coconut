@@ -16,16 +16,16 @@ with open('test.cn', "r+b") as f:
 			pass
       
 		if lexed[0] == b'\xf0\x9f\x8c\x88':
-			# 2🌈
-			pass
+			# 2🌈 input statement
+			registers[lexed[1]] = input()
       
 		if lexed[0] == b'\xf0\x9f\x8d\x89':
 			# 3🍉 if/endif statement
 			pass
       
-		if lexed[0] == b'\xf0\x9f\x8c\xba':
-			# 4🌺
-			pass
+		if lexed[0] == b'\xf0\x9f\x8c\xb8':
+			# 4🌸 goto
+			line = registers[lexed[1]]
       
 		if lexed[0] == b'\xf0\x9f\xa5\x9d':
 			# 5🥝
