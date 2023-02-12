@@ -1,9 +1,3 @@
-"""
-	R1: b'\xf0\x9f\x8d\x8c' -> 🍌
-	R2: b'\xf0\x9f\xa7\x83' -> 🧃
-	R3: b'\xf0\x9f\xa5\x91' -> 🥑
-	R4: b'\xf0\x9f\xa9\xb3' -> 🩳
-"""
 registers = {
 	b'\xf0\x9f\x8d\x8c': None,
 	b'\xf0\x9f\xa7\x83': None,
@@ -41,11 +35,9 @@ with open('test.cn', "r+b") as f:
 		if lexed[0] == b'\xf0\x9f\x8d\x93':
 			# 8🍓Subtraction Operator
 			registers[lexed[3]] = registers[lexed[1]] - registers[lexed[2]]
-			print(registers[lexed[3]])
 		if lexed[0] == b'\xf0\x9f\x8d\x92':
 			# 9🍒 Division operator
 			registers[lexed[3]] = registers[lexed[1]] / registers[lexed[2]]
-			print(registers[lexed[3]])
 		if lexed[0] == b'\xf0\x9f\x8d\x88':
 			# 10🍈 Equal operator
 			registers[lexed[3]] = registers[lexed[1]] == registers[lexed[2]]
@@ -75,5 +67,4 @@ with open('test.cn', "r+b") as f:
 			if lexed[1] in registers: 
 				print(registers[lexed[1]])
 		if lexed[0] in registers:
-			registers[lexed[0]] = eval(b''.join(lexed[i]
-								for i in range(1, len(lexed))))
+			registers[lexed[0]] = eval(b''.join(lexed[i] for i in range(1, len(lexed))))
