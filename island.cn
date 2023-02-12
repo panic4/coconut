@@ -1,48 +1,50 @@
+🩳'You wake up on a beach covered in dried salt and sand. You can’t seem to remember how you got there, and you’re feeling dehydrated.'
+🎣🩳
 🩳0
 🍈🧃🩳🩳 if pos = 0
 🍉🩳
-🩳'You look around your surroundings and you see a bright orange life raft and a tropical forest'
+🩳'The bright sun beats down on your face. You could head into the forest, towards the center of the island. Down the coast is a bright orange life raft.'
 🎣🩳
 🍉
 🩳1
 🍈🧃🩳🩳 if pos = 0
 🍉🩳
-🩳'You see a bright orange life raft in the distance and start to walk over with your remaining strength that you have'
+🩳'As you approach the life raft, you notice it has holes torn into it and looks irreparable. After digging around in it, you do find an intact flare and some duct tape.	'
 🎣🩳
 🍉
 🩳2
 🍈🧃🩳🩳 if pos = 0
 🍉🩳
-🩳'You see the green forest which looks like a nice refuge for you sunburnt skin and a glimpse of hope fills you with determination'
+🩳'You are now in the forest, toward the Western end of the island. You notice some decently-sized logs hidden in some shrubs. You could head back to shore, or proceed deeper and a few different directions.'
 🎣🩳
 🍉
 🩳3
 🍈🧃🩳🩳 if pos = 0
 🍉🩳
-🩳'In the distance you see a large cliff and you think that this cliff can give you a good vantage point'
+🩳'In the distance you see a large cliff. It looks like a good vantage point.'
 🎣🩳
 🍉
 🩳4
 🍈🧃🩳🩳 if pos = 0
 🍉🩳
-🩳'the southern side of the forest you can hear the sound of flowing water'
+🩳'You enter the Southern side of the forest. In the distance, you hear gentle running water. In a different direction, you hear a deep growl.'
 🎣🩳
 🍉
 🩳5
 🍈🧃🩳🩳 if pos = 0
 🍉🩳
-🩳'the cave gives off a dark mysterious vibe as you cant seem to see that far into it'
+🩳'As you approach, you see you're headed towards a very dark cave. You could turn around or head into it.'
 🎣🩳
 🍉
 🩳6
 🍈🧃🩳🩳 if pos = 0
 🍉🩳
-🩳'The point you have reached after you followed the sound of the river has revealed a beautiful serene flowing river'
+🩳'The dirt gives way to rocks as you come upon a serene and beautiful creek. There isn't much around, but it looks like a fine place to have a drink.'
 🎣🩳
 🍉
 🩳7
 🍈🧃🩳🩳 if pos = 0
 🍉🩳
-🩳'You now are at the highest point of the island and within the distance you can see a freighter that you shoot your flare at'
+🩳'You've reached the highest point of the island. At the edge of the horizon you can spot a green freighter.'
 🎣🩳
 🍉
