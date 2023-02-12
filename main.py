@@ -59,6 +59,7 @@ def and_op():
 
 with open('test.cn', "r+b") as f:
     lines = f.readlines()
+    if_flag = False
     for line in lines:
         lexed = [line[i:i + 4] for i in range(0, len(line), 4)]
 
@@ -69,8 +70,8 @@ with open('test.cn', "r+b") as f:
             # 2🌈
             print()
         if lexed[0] == b'\xf0\x9f\x8d\x89':
-            # 3🍉
-            print()
+            # 3🍉 if/endif statement
+            pass
         if lexed[0] == b'\xf0\x9f\x8c\xba':
             # 4🌺
             print()
@@ -119,4 +120,4 @@ with open('test.cn', "r+b") as f:
             pass
         if lexed[0] in registers:
             registers[lexed[0]] = eval(b''.join(lexed[i]
-                                       for i in range(1, len(lexed))))
+                                                for i in range(1, len(lexed))))
