@@ -19,19 +19,19 @@ with open('test.cn', "r+b") as f:
 
 		if lexed[0] == b'\xf0\x9f\x8d\x8e':
 			# 1🍎
-			print()
+			pass
 		if lexed[0] == b'\xf0\x9f\x8c\x88':
 			# 2🌈
-			print()
+			pass
 		if lexed[0] == b'\xf0\x9f\x8d\x89':
 			# 3🍉 if/endif statement
-			print()
+			pass
 		if lexed[0] == b'\xf0\x9f\x8c\xba':
 			# 4🌺
-			print()
+			pass
 		if lexed[0] == b'\xf0\x9f\xa5\x9d':
 			# 5🥝
-			print()
+			pass
 		if lexed[0] == b'\xf0\x9f\x8d\x87':
 			# 6🍇 Addition Operator
 			registers[lexed[3]] = registers[lexed[1]] + registers[lexed[2]]
