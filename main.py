@@ -65,10 +65,10 @@ if lexed[0] == b'\xf0\x9f\x8f\x9d':
 	pass
 if lexed[0] == b'\xf0\x9f\x8c\x8b':
 	#16🌋 
-	print()
+	pass
 if lexed[0] == b'\xf0\x9f\x8c\x8a':
 	#17🌊
-	print()
+	pass
 if lexed[0] == b'\xf0\x9f\x8e\xa3':
 	#17🎣 
 	if lexed[1] in registers: 
