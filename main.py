@@ -2,14 +2,14 @@ from sys import argv
 
 registers = {
 	b'\xf0\x9f\x8d\x8c': None,	#🍌
-	b'\xf0\x9f\xa7\x83': None,	#🧃
+	b'\xf0\x9f\xa7\x83': None,		#🧃
 	b'\xf0\x9f\xa5\x91': None,	#🥑
 	b'\xf0\x9f\xa9\xb3': None	#🩳
 }
 
 exec = True
 
-with open(argv[1], "r+b") as f:
+with open('island.cn', "r+b") as f:
 	lines = f.readlines()
 
 i = 0
@@ -23,7 +23,7 @@ while i  < len(lines):
 	
 		if lexed[0] == b'\xf0\x9f\x8c\x88':
 			#🌈 input statement
-			registers[lexed[1]] = input()
+			registers[lexed[1]] = eval(input())
 			
 		if lexed[0] == b'\xf0\x9f\x8e\xa3':
 			#18🎣 Print statement
@@ -32,12 +32,15 @@ while i  < len(lines):
 	
 		if lexed[0] == b'\xf0\x9f\x8d\x89' and len(lexed)>1:
 			# 3🍉 if/endif statement
-			if registers[lexed[1]] == False:
+			if len(lexed) == 2:
+				pass
+			elif registers[lexed[1]] == False:
 				exec = False
 
 		if lexed[0] == b'\xf0\x9f\x8c\xb8':
 			# 4🌸 goto
 			i = registers[lexed[1]]
+			continue
 	
 		if lexed[0] == b'\xf0\x9f\x8d\x87':
 			# 6🍇 Addition Operator
