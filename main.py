@@ -9,8 +9,7 @@ registers = {
 
 exec = True
 
-# argv[1]
-with open('test.cn', "r+b") as f:
+with open(argv[1], "r+b") as f:
 	lines = f.readlines()
 
 i = 0
